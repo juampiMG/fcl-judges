@@ -1,13 +1,27 @@
-# FCL Judge Desk
+# FCL Judge Desk · GitHub Pages
 
-Client source is in `web/`. Scores stay in browser IndexedDB; tab navigation is restored from sessionStorage. Runtime access is enforced by `worker/auth.js` for every application asset.
+Web estática de jueces con 228 Teams y 231 parejas. El contador y resultados se guardan en IndexedDB, y la pantalla actual en sessionStorage.
 
-## Build and test
+## Publicar
 
-Run `node --test tests/*.test.js` and `node scripts/build-auth.mjs`. The build embeds the client into `dist/server/index.js`; there is no public static-assets binding. Never edit generated `dist/` files.
+En GitHub: Settings → Pages → Build and deployment → Source → GitHub Actions.
+El workflow `.github/workflows/pages.yml` ejecuta las pruebas, compila y publica con cada push a `main`. También admite ejecución manual desde Actions.
+URL prevista: https://juampiMG.github.io/fcl-judges/
 
-Production secrets are configured in Sites: `JUDGE_PASSWORD` and `JUDGE_SESSION_SECRET`. Keep both out of source and browser bundles. Changing either invalidates existing access cookies. Local preview uses the same environment key names, with test-only values, then `node server.mjs`.
+## Desarrollo
 
-The access cookie is signed, HttpOnly, Secure, SameSite=Strict and expires after 30 days. No password is stored in it. Sites owner-private access remains a separate outer boundary.
+Node.js 22 o posterior. Sin dependencias de instalación.
 
-Opening/reloading requires connectivity. The migration service worker removes only legacy FCL shell caches; it does not clear IndexedDB or sessionStorage. An already loaded counter can continue recording locally offline. Login throttling is a best-effort per-worker-instance limit, in addition to the existing private Sites boundary.
+```sh
+npm test
+npm run build
+npm start
+```
+
+Abre http://127.0.0.1:4173. Los archivos fuente están en `web/`; `dist/` es generado.
+
+## Acceso
+
+La contraseña acordada se comprueba en el navegador; su huella está en `web/access.js`. La cookie recuerda el acceso 30 días. Es una barrera de cortesía, no autenticación segura: los archivos son públicos y se puede eludir. No se deben publicar secretos en este repositorio. La implementación anterior de servidor queda como referencia en `worker/`, pero no se publica ni se ejecuta en Pages.
+
+Las rutas relativas admiten `/fcl-judges/`. No hay integración con Drive. Abrir o recargar requiere conexión. Cambiar de dominio no transfiere los resultados guardados: permanecen en el navegador y dominio donde se registraron.

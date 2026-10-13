@@ -1,0 +1,1121 @@
+{
+  "artifact": "FCL Costa Brava judge app analysis",
+  "status": "analysis_draft_not_implementation_catalog",
+  "scope_note": "Matrix of scoring targets checked against supplied scoresheets. Does not replace full movement sequences or constitute an implemented or tested application. Product implementation has not started.",
+  "sources": [
+    {
+      "path": "/Users/me3/Downloads/wods_costa_brava/Dúos Costa Brava 2026.docx",
+      "sha256": "5b81c1d2d1abb68bdaa5634bd3306ffc3d4141a8aa3c6cda9f01f0c5a22f0179"
+    },
+    {
+      "path": "/Users/me3/Downloads/wods_costa_brava/Scoresheets costa brava equipos 2026.docx",
+      "sha256": "a96b7bb732826b1b47abfb8fb7f9b2ef4a79c38bcd172170e5f9f7d1746bbdb6"
+    },
+    {
+      "path": "/Users/me3/Downloads/wods_costa_brava/Scoresheets costa brava parejas 2026.docx",
+      "sha256": "cfb1e9c766d0442854c0753c4a1a9bd357774c88adb5b8c56280b4cb4a5d0822"
+    },
+    {
+      "path": "/Users/me3/Downloads/wods_costa_brava/Teams Costa Brava 2026.docx",
+      "sha256": "48acd280b1b1c0e26dabe413f619e670691f3f365c302bbf2e49d8b399fe074e"
+    }
+  ],
+  "confirmed_decisions": {
+    "timer_in_app": false,
+    "official_clock": "field_clock",
+    "closure": "manual",
+    "time_results": "manually_entered_by_judge",
+    "authoritative_rules": "supplied_scoresheets_and_explicit_user_clarifications",
+    "time_cap_result": "completed_score_units_without_penalty_or_tiebreak",
+    "pairs_wod5": {
+      "part_a": "run",
+      "part_b": "deadlifts_and_walking_lunges",
+      "results": "independent_manual_entries"
+    },
+    "teams_open_final": {
+      "first_phase": "Strict HSPU as written in scoresheet",
+      "second_phase_pullups": "shared_work_not_synchronized",
+      "bar_complex": "synchronized_as_written"
+    },
+    "scoring_units": {
+      "complete_carry_20m_per_athlete": 1,
+      "complete_lunges_20m": 1,
+      "complete_bar_complex": 1,
+      "hsw_4m_turn_4m_per_athlete": 3
+    },
+    "drive": "destination_and_integration_deferred"
+  },
+  "proposed_product_defaults": {
+    "required_identity": [
+      "team_number",
+      "team_name"
+    ],
+    "optional_identity": [
+      "heat",
+      "lane",
+      "judge"
+    ],
+    "signature": "not_in_initial_scope",
+    "block_transition": "explicit_next_block_separate_from_count_button",
+    "correction": "undo_last_annotation_restores_previous_block_state",
+    "local_save": "persist_active_and_completed_attempts_with_visible_write_status",
+    "backup": "download_local_results_csv",
+    "remote_submission": "not_available_until_destination_is_connected",
+    "offline": "prepare_application_and_workouts_online_before_use"
+  },
+  "variants": [
+    {
+      "id": "teams-elite-1",
+      "modality": "teams",
+      "category": "elite",
+      "wod": "1",
+      "components": [
+        {
+          "id": "1",
+          "target_score_units": 92,
+          "unit": "reps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        }
+      ]
+    },
+    {
+      "id": "teams-elite-2",
+      "modality": "teams",
+      "category": "elite",
+      "wod": "2",
+      "components": [
+        {
+          "id": "2",
+          "target_score_units": 145,
+          "unit": "reps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        }
+      ]
+    },
+    {
+      "id": "teams-elite-3",
+      "modality": "teams",
+      "category": "elite",
+      "wod": "3",
+      "components": [
+        {
+          "id": "3A",
+          "target_score_units": 144,
+          "unit": "reps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        },
+        {
+          "id": "3B",
+          "target_score_units": null,
+          "unit": "calories",
+          "result_entry": "manual_calories"
+        }
+      ]
+    },
+    {
+      "id": "teams-elite-4",
+      "modality": "teams",
+      "category": "elite",
+      "wod": "4",
+      "components": [
+        {
+          "id": "4",
+          "target_score_units": 118,
+          "unit": "reps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        }
+      ]
+    },
+    {
+      "id": "teams-elite-5",
+      "modality": "teams",
+      "category": "elite",
+      "wod": "5",
+      "components": [
+        {
+          "id": "5",
+          "target_score_units": 120,
+          "unit": "reps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        }
+      ]
+    },
+    {
+      "id": "teams-elite-final",
+      "modality": "teams",
+      "category": "elite",
+      "wod": "final",
+      "components": [
+        {
+          "id": "final",
+          "target_score_units": 216,
+          "unit": "reps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        }
+      ]
+    },
+    {
+      "id": "teams-rx-1",
+      "modality": "teams",
+      "category": "rx",
+      "wod": "1",
+      "components": [
+        {
+          "id": "1",
+          "target_score_units": 92,
+          "unit": "reps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        }
+      ]
+    },
+    {
+      "id": "teams-rx-2",
+      "modality": "teams",
+      "category": "rx",
+      "wod": "2",
+      "components": [
+        {
+          "id": "2",
+          "target_score_units": 115,
+          "unit": "reps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        }
+      ]
+    },
+    {
+      "id": "teams-rx-3",
+      "modality": "teams",
+      "category": "rx",
+      "wod": "3",
+      "components": [
+        {
+          "id": "3A",
+          "target_score_units": 144,
+          "unit": "reps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        },
+        {
+          "id": "3B",
+          "target_score_units": null,
+          "unit": "calories",
+          "result_entry": "manual_calories"
+        }
+      ]
+    },
+    {
+      "id": "teams-rx-4",
+      "modality": "teams",
+      "category": "rx",
+      "wod": "4",
+      "components": [
+        {
+          "id": "4",
+          "target_score_units": 118,
+          "unit": "reps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        }
+      ]
+    },
+    {
+      "id": "teams-rx-5",
+      "modality": "teams",
+      "category": "rx",
+      "wod": "5",
+      "components": [
+        {
+          "id": "5",
+          "target_score_units": 120,
+          "unit": "reps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        }
+      ]
+    },
+    {
+      "id": "teams-rx-final",
+      "modality": "teams",
+      "category": "rx",
+      "wod": "final",
+      "components": [
+        {
+          "id": "final",
+          "target_score_units": 174,
+          "unit": "reps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        }
+      ]
+    },
+    {
+      "id": "teams-open-1",
+      "modality": "teams",
+      "category": "open",
+      "wod": "1",
+      "components": [
+        {
+          "id": "1",
+          "target_score_units": 92,
+          "unit": "reps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        }
+      ]
+    },
+    {
+      "id": "teams-open-2",
+      "modality": "teams",
+      "category": "open",
+      "wod": "2",
+      "components": [
+        {
+          "id": "2",
+          "target_score_units": 115,
+          "unit": "reps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        }
+      ]
+    },
+    {
+      "id": "teams-open-3",
+      "modality": "teams",
+      "category": "open",
+      "wod": "3",
+      "components": [
+        {
+          "id": "3A",
+          "target_score_units": 144,
+          "unit": "reps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        },
+        {
+          "id": "3B",
+          "target_score_units": null,
+          "unit": "calories",
+          "result_entry": "manual_calories"
+        }
+      ]
+    },
+    {
+      "id": "teams-open-4",
+      "modality": "teams",
+      "category": "open",
+      "wod": "4",
+      "components": [
+        {
+          "id": "4",
+          "target_score_units": 103,
+          "unit": "reps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        }
+      ]
+    },
+    {
+      "id": "teams-open-5",
+      "modality": "teams",
+      "category": "open",
+      "wod": "5",
+      "components": [
+        {
+          "id": "5",
+          "target_score_units": 400,
+          "unit": "reps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        }
+      ]
+    },
+    {
+      "id": "teams-open-final",
+      "modality": "teams",
+      "category": "open",
+      "wod": "final",
+      "components": [
+        {
+          "id": "final",
+          "target_score_units": 150,
+          "unit": "reps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        }
+      ]
+    },
+    {
+      "id": "parejas-masculino-elite-1",
+      "modality": "parejas",
+      "composition": "masculino",
+      "category": "elite",
+      "wod": "1",
+      "components": [
+        {
+          "id": "1",
+          "target_score_units": 92,
+          "unit": "reps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        }
+      ]
+    },
+    {
+      "id": "parejas-masculino-elite-2",
+      "modality": "parejas",
+      "composition": "masculino",
+      "category": "elite",
+      "wod": "2",
+      "components": [
+        {
+          "id": "2",
+          "target_score_units": 87,
+          "unit": "reps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        }
+      ]
+    },
+    {
+      "id": "parejas-masculino-elite-3",
+      "modality": "parejas",
+      "composition": "masculino",
+      "category": "elite",
+      "wod": "3",
+      "components": [
+        {
+          "id": "3A",
+          "target_score_units": 96,
+          "unit": "reps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        },
+        {
+          "id": "3B",
+          "target_score_units": null,
+          "unit": "calories",
+          "result_entry": "manual_calories"
+        }
+      ]
+    },
+    {
+      "id": "parejas-masculino-elite-4",
+      "modality": "parejas",
+      "composition": "masculino",
+      "category": "elite",
+      "wod": "4",
+      "components": [
+        {
+          "id": "4",
+          "target_score_units": 114,
+          "unit": "reps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        }
+      ]
+    },
+    {
+      "id": "parejas-masculino-elite-5",
+      "modality": "parejas",
+      "composition": "masculino",
+      "category": "elite",
+      "wod": "5",
+      "components": [
+        {
+          "id": "5A",
+          "target_score_units": 3,
+          "unit": "laps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        },
+        {
+          "id": "5B",
+          "target_score_units": 63,
+          "unit": "reps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        }
+      ]
+    },
+    {
+      "id": "parejas-masculino-rx-1",
+      "modality": "parejas",
+      "composition": "masculino",
+      "category": "rx",
+      "wod": "1",
+      "components": [
+        {
+          "id": "1",
+          "target_score_units": 92,
+          "unit": "reps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        }
+      ]
+    },
+    {
+      "id": "parejas-masculino-rx-2",
+      "modality": "parejas",
+      "composition": "masculino",
+      "category": "rx",
+      "wod": "2",
+      "components": [
+        {
+          "id": "2",
+          "target_score_units": 69,
+          "unit": "reps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        }
+      ]
+    },
+    {
+      "id": "parejas-masculino-rx-3",
+      "modality": "parejas",
+      "composition": "masculino",
+      "category": "rx",
+      "wod": "3",
+      "components": [
+        {
+          "id": "3A",
+          "target_score_units": 96,
+          "unit": "reps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        },
+        {
+          "id": "3B",
+          "target_score_units": null,
+          "unit": "calories",
+          "result_entry": "manual_calories"
+        }
+      ]
+    },
+    {
+      "id": "parejas-masculino-rx-4",
+      "modality": "parejas",
+      "composition": "masculino",
+      "category": "rx",
+      "wod": "4",
+      "components": [
+        {
+          "id": "4",
+          "target_score_units": 114,
+          "unit": "reps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        }
+      ]
+    },
+    {
+      "id": "parejas-masculino-rx-5",
+      "modality": "parejas",
+      "composition": "masculino",
+      "category": "rx",
+      "wod": "5",
+      "components": [
+        {
+          "id": "5A",
+          "target_score_units": 3,
+          "unit": "laps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        },
+        {
+          "id": "5B",
+          "target_score_units": 48,
+          "unit": "reps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        }
+      ]
+    },
+    {
+      "id": "parejas-masculino-open-1",
+      "modality": "parejas",
+      "composition": "masculino",
+      "category": "open",
+      "wod": "1",
+      "components": [
+        {
+          "id": "1",
+          "target_score_units": 92,
+          "unit": "reps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        }
+      ]
+    },
+    {
+      "id": "parejas-masculino-open-2",
+      "modality": "parejas",
+      "composition": "masculino",
+      "category": "open",
+      "wod": "2",
+      "components": [
+        {
+          "id": "2",
+          "target_score_units": 69,
+          "unit": "reps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        }
+      ]
+    },
+    {
+      "id": "parejas-masculino-open-3",
+      "modality": "parejas",
+      "composition": "masculino",
+      "category": "open",
+      "wod": "3",
+      "components": [
+        {
+          "id": "3A",
+          "target_score_units": 96,
+          "unit": "reps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        },
+        {
+          "id": "3B",
+          "target_score_units": null,
+          "unit": "calories",
+          "result_entry": "manual_calories"
+        }
+      ]
+    },
+    {
+      "id": "parejas-masculino-open-4",
+      "modality": "parejas",
+      "composition": "masculino",
+      "category": "open",
+      "wod": "4",
+      "components": [
+        {
+          "id": "4",
+          "target_score_units": 99,
+          "unit": "reps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        }
+      ]
+    },
+    {
+      "id": "parejas-masculino-open-5",
+      "modality": "parejas",
+      "composition": "masculino",
+      "category": "open",
+      "wod": "5",
+      "components": [
+        {
+          "id": "5A",
+          "target_score_units": 3,
+          "unit": "laps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        },
+        {
+          "id": "5B",
+          "target_score_units": 63,
+          "unit": "reps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        }
+      ]
+    },
+    {
+      "id": "parejas-femenino-elite-1",
+      "modality": "parejas",
+      "composition": "femenino",
+      "category": "elite",
+      "wod": "1",
+      "components": [
+        {
+          "id": "1",
+          "target_score_units": 60,
+          "unit": "reps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        }
+      ]
+    },
+    {
+      "id": "parejas-femenino-elite-2",
+      "modality": "parejas",
+      "composition": "femenino",
+      "category": "elite",
+      "wod": "2",
+      "components": [
+        {
+          "id": "2",
+          "target_score_units": 87,
+          "unit": "reps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        }
+      ]
+    },
+    {
+      "id": "parejas-femenino-elite-3",
+      "modality": "parejas",
+      "composition": "femenino",
+      "category": "elite",
+      "wod": "3",
+      "components": [
+        {
+          "id": "3A",
+          "target_score_units": 96,
+          "unit": "reps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        },
+        {
+          "id": "3B",
+          "target_score_units": null,
+          "unit": "calories",
+          "result_entry": "manual_calories"
+        }
+      ]
+    },
+    {
+      "id": "parejas-femenino-elite-4",
+      "modality": "parejas",
+      "composition": "femenino",
+      "category": "elite",
+      "wod": "4",
+      "components": [
+        {
+          "id": "4",
+          "target_score_units": 114,
+          "unit": "reps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        }
+      ]
+    },
+    {
+      "id": "parejas-femenino-elite-5",
+      "modality": "parejas",
+      "composition": "femenino",
+      "category": "elite",
+      "wod": "5",
+      "components": [
+        {
+          "id": "5A",
+          "target_score_units": 3,
+          "unit": "laps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        },
+        {
+          "id": "5B",
+          "target_score_units": 63,
+          "unit": "reps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        }
+      ]
+    },
+    {
+      "id": "parejas-femenino-rx-1",
+      "modality": "parejas",
+      "composition": "femenino",
+      "category": "rx",
+      "wod": "1",
+      "components": [
+        {
+          "id": "1",
+          "target_score_units": 60,
+          "unit": "reps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        }
+      ]
+    },
+    {
+      "id": "parejas-femenino-rx-2",
+      "modality": "parejas",
+      "composition": "femenino",
+      "category": "rx",
+      "wod": "2",
+      "components": [
+        {
+          "id": "2",
+          "target_score_units": 69,
+          "unit": "reps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        }
+      ]
+    },
+    {
+      "id": "parejas-femenino-rx-3",
+      "modality": "parejas",
+      "composition": "femenino",
+      "category": "rx",
+      "wod": "3",
+      "components": [
+        {
+          "id": "3A",
+          "target_score_units": 96,
+          "unit": "reps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        },
+        {
+          "id": "3B",
+          "target_score_units": null,
+          "unit": "calories",
+          "result_entry": "manual_calories"
+        }
+      ]
+    },
+    {
+      "id": "parejas-femenino-rx-4",
+      "modality": "parejas",
+      "composition": "femenino",
+      "category": "rx",
+      "wod": "4",
+      "components": [
+        {
+          "id": "4",
+          "target_score_units": 114,
+          "unit": "reps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        }
+      ]
+    },
+    {
+      "id": "parejas-femenino-rx-5",
+      "modality": "parejas",
+      "composition": "femenino",
+      "category": "rx",
+      "wod": "5",
+      "components": [
+        {
+          "id": "5A",
+          "target_score_units": 3,
+          "unit": "laps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        },
+        {
+          "id": "5B",
+          "target_score_units": 48,
+          "unit": "reps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        }
+      ]
+    },
+    {
+      "id": "parejas-femenino-open-1",
+      "modality": "parejas",
+      "composition": "femenino",
+      "category": "open",
+      "wod": "1",
+      "components": [
+        {
+          "id": "1",
+          "target_score_units": 60,
+          "unit": "reps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        }
+      ]
+    },
+    {
+      "id": "parejas-femenino-open-2",
+      "modality": "parejas",
+      "composition": "femenino",
+      "category": "open",
+      "wod": "2",
+      "components": [
+        {
+          "id": "2",
+          "target_score_units": 69,
+          "unit": "reps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        }
+      ]
+    },
+    {
+      "id": "parejas-femenino-open-3",
+      "modality": "parejas",
+      "composition": "femenino",
+      "category": "open",
+      "wod": "3",
+      "components": [
+        {
+          "id": "3A",
+          "target_score_units": 96,
+          "unit": "reps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        },
+        {
+          "id": "3B",
+          "target_score_units": null,
+          "unit": "calories",
+          "result_entry": "manual_calories"
+        }
+      ]
+    },
+    {
+      "id": "parejas-femenino-open-4",
+      "modality": "parejas",
+      "composition": "femenino",
+      "category": "open",
+      "wod": "4",
+      "components": [
+        {
+          "id": "4",
+          "target_score_units": 99,
+          "unit": "reps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        }
+      ]
+    },
+    {
+      "id": "parejas-femenino-open-5",
+      "modality": "parejas",
+      "composition": "femenino",
+      "category": "open",
+      "wod": "5",
+      "components": [
+        {
+          "id": "5A",
+          "target_score_units": 3,
+          "unit": "laps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        },
+        {
+          "id": "5B",
+          "target_score_units": 63,
+          "unit": "reps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        }
+      ]
+    },
+    {
+      "id": "parejas-mixto-elite-1",
+      "modality": "parejas",
+      "composition": "mixto",
+      "category": "elite",
+      "wod": "1",
+      "components": [
+        {
+          "id": "1",
+          "target_score_units": 76,
+          "unit": "reps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        }
+      ]
+    },
+    {
+      "id": "parejas-mixto-elite-2",
+      "modality": "parejas",
+      "composition": "mixto",
+      "category": "elite",
+      "wod": "2",
+      "components": [
+        {
+          "id": "2",
+          "target_score_units": 87,
+          "unit": "reps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        }
+      ]
+    },
+    {
+      "id": "parejas-mixto-elite-3",
+      "modality": "parejas",
+      "composition": "mixto",
+      "category": "elite",
+      "wod": "3",
+      "components": [
+        {
+          "id": "3A",
+          "target_score_units": 96,
+          "unit": "reps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        },
+        {
+          "id": "3B",
+          "target_score_units": null,
+          "unit": "calories",
+          "result_entry": "manual_calories"
+        }
+      ]
+    },
+    {
+      "id": "parejas-mixto-elite-4",
+      "modality": "parejas",
+      "composition": "mixto",
+      "category": "elite",
+      "wod": "4",
+      "components": [
+        {
+          "id": "4",
+          "target_score_units": 114,
+          "unit": "reps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        }
+      ]
+    },
+    {
+      "id": "parejas-mixto-elite-5",
+      "modality": "parejas",
+      "composition": "mixto",
+      "category": "elite",
+      "wod": "5",
+      "components": [
+        {
+          "id": "5A",
+          "target_score_units": 3,
+          "unit": "laps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        },
+        {
+          "id": "5B",
+          "target_score_units": 63,
+          "unit": "reps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        }
+      ]
+    },
+    {
+      "id": "parejas-mixto-rx-1",
+      "modality": "parejas",
+      "composition": "mixto",
+      "category": "rx",
+      "wod": "1",
+      "components": [
+        {
+          "id": "1",
+          "target_score_units": 76,
+          "unit": "reps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        }
+      ]
+    },
+    {
+      "id": "parejas-mixto-rx-2",
+      "modality": "parejas",
+      "composition": "mixto",
+      "category": "rx",
+      "wod": "2",
+      "components": [
+        {
+          "id": "2",
+          "target_score_units": 69,
+          "unit": "reps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        }
+      ]
+    },
+    {
+      "id": "parejas-mixto-rx-3",
+      "modality": "parejas",
+      "composition": "mixto",
+      "category": "rx",
+      "wod": "3",
+      "components": [
+        {
+          "id": "3A",
+          "target_score_units": 96,
+          "unit": "reps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        },
+        {
+          "id": "3B",
+          "target_score_units": null,
+          "unit": "calories",
+          "result_entry": "manual_calories"
+        }
+      ]
+    },
+    {
+      "id": "parejas-mixto-rx-4",
+      "modality": "parejas",
+      "composition": "mixto",
+      "category": "rx",
+      "wod": "4",
+      "components": [
+        {
+          "id": "4",
+          "target_score_units": 114,
+          "unit": "reps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        }
+      ]
+    },
+    {
+      "id": "parejas-mixto-rx-5",
+      "modality": "parejas",
+      "composition": "mixto",
+      "category": "rx",
+      "wod": "5",
+      "components": [
+        {
+          "id": "5A",
+          "target_score_units": 3,
+          "unit": "laps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        },
+        {
+          "id": "5B",
+          "target_score_units": 48,
+          "unit": "reps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        }
+      ]
+    },
+    {
+      "id": "parejas-mixto-open-1",
+      "modality": "parejas",
+      "composition": "mixto",
+      "category": "open",
+      "wod": "1",
+      "components": [
+        {
+          "id": "1",
+          "target_score_units": 76,
+          "unit": "reps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        }
+      ]
+    },
+    {
+      "id": "parejas-mixto-open-2",
+      "modality": "parejas",
+      "composition": "mixto",
+      "category": "open",
+      "wod": "2",
+      "components": [
+        {
+          "id": "2",
+          "target_score_units": 69,
+          "unit": "reps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        }
+      ]
+    },
+    {
+      "id": "parejas-mixto-open-3",
+      "modality": "parejas",
+      "composition": "mixto",
+      "category": "open",
+      "wod": "3",
+      "components": [
+        {
+          "id": "3A",
+          "target_score_units": 96,
+          "unit": "reps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        },
+        {
+          "id": "3B",
+          "target_score_units": null,
+          "unit": "calories",
+          "result_entry": "manual_calories"
+        }
+      ]
+    },
+    {
+      "id": "parejas-mixto-open-4",
+      "modality": "parejas",
+      "composition": "mixto",
+      "category": "open",
+      "wod": "4",
+      "components": [
+        {
+          "id": "4",
+          "target_score_units": 99,
+          "unit": "reps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        }
+      ]
+    },
+    {
+      "id": "parejas-mixto-open-5",
+      "modality": "parejas",
+      "composition": "mixto",
+      "category": "open",
+      "wod": "5",
+      "components": [
+        {
+          "id": "5A",
+          "target_score_units": 3,
+          "unit": "laps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        },
+        {
+          "id": "5B",
+          "target_score_units": 63,
+          "unit": "reps",
+          "result_entry": "manual_time_if_completed_or_completed_units_at_cap"
+        }
+      ]
+    }
+  ]
+}

@@ -1,11 +1,11 @@
 import http from 'node:http';
-import worker from './dist/server/index.js';
-const port=Number(process.env.PORT||4173);
-http.createServer(async(req,res)=>{
- try{
-  const chunks=[];for await(const chunk of req)chunks.push(chunk);
-  const request=new Request('http://127.0.0.1:'+port+req.url,{method:req.method,headers:req.headers,...(!['GET','HEAD'].includes(req.method)?{body:Buffer.concat(chunks)}:{})});
-  const response=await worker.fetch(request,{JUDGE_PASSWORD:process.env.JUDGE_PASSWORD,JUDGE_SESSION_SECRET:process.env.JUDGE_SESSION_SECRET});
-  res.writeHead(response.status,Object.fromEntries(response.headers));res.end(Buffer.from(await response.arrayBuffer()));
- }catch{res.writeHead(500);res.end('Error');}
-}).listen(port,'127.0.0.1',()=>console.log('Local: http://127.0.0.1:'+port));
+import {readFile} from 'node:fs/promises';
+import {resolve,extname,sep} from 'node:path';
+const root=resolve('dist'),port=Number(process.env.PORT||4173);
+const types={'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.svg':'image/svg+xml','.webmanifest':'application/manifest+json'};
+http.createServer(async(req,res)=>{try{
+ const pathname=decodeURIComponent(new URL(req.url,'http://localhost').pathname);
+ const file=resolve(root,'.'+(pathname.endsWith('/')?pathname+'index.html':pathname));
+ if(!file.startsWith(root+sep)){res.writeHead(403);return res.end();}
+ const body=await readFile(file);res.writeHead(200,{'Content-Type':types[extname(file)]||'application/octet-stream','Cache-Control':'no-store'});res.end(body);
+}catch{res.writeHead(404);res.end('Not found');}}).listen(port,'127.0.0.1',()=>console.log('Local: http://127.0.0.1:'+port));

@@ -31,3 +31,5 @@ dialog{width:min(94vw,520px);max-height:90dvh;padding:28px;border:1px solid var(
 .team-results li{margin:8px 0}
 .team-results button{display:block;width:100%;text-align:left;white-space:normal}
 .team-results button span{display:block;font-size:13px;font-weight:400;margin-top:6px}
+
+[hidden]{display:none!important}.access-gate{max-width:480px;margin:8vh auto;padding:32px;background:white;border:1px solid #879399;border-radius:16px}.access-gate form{display:grid;gap:16px}.access-gate input{width:100%;min-height:52px;padding:12px;font-size:20px}.access-gate button{min-height:56px}.access-gate #access-error{color:#a71919;margin:0}

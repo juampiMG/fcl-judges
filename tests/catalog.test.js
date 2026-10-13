@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { LEVELS, COMPOSITIONS, listWorkouts, getWorkout } from '../web/catalog.js';
 
-const fixture = JSON.parse(readFileSync(new URL('../../output/judge-app-analysis/catalog-review.json', import.meta.url)));
+const fixture = JSON.parse(readFileSync(new URL('./fixtures/catalog-review.json', import.meta.url)));
 const get = (wodId, level = 'elite', modality = 'teams', composition = 'masculino') => getWorkout({ wodId, level, modality, composition });
 
 test('all 63 official variants have exact independent scoresheet totals', () => {
