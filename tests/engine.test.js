@@ -22,3 +22,14 @@ test('team number rejects letters, symbols and exponent notation and preserves l
   for(const number of ['ABC','42A','-42','+42','4.2','4e2','4 2','４２'])assert.throws(()=>createAttempt(workout,{number,name:'Team'}),/dígitos/);
   assert.equal(createAttempt(workout,{number:'0042',name:'Team'}).team.number,'0042');
 });
+
+test('bulk completion adds only missing reps, advances and undo survives reload',()=>{
+ const w=structuredClone(workout);w.parts[0].blocks=[{target:10},{target:8}];
+ let a=createAttempt(w,{number:'42',name:'Test'});a=increment(increment(a,'a'),'a');
+ const before=structuredClone(a.parts.a);a=setBlockCount(a,'a',10);
+ assert.deepEqual(a.parts.a.counts,[10,0]);assert.equal(a.parts.a.index,1);assert.equal(total(a.parts.a),10);
+ a=undo(JSON.parse(JSON.stringify(a)),'a');assert.deepEqual(a.parts.a,before);
+ a=setBlockCount(a,'a',10);a=setBlockCount(a,'a',8);
+ assert.deepEqual(a.parts.a.counts,[10,8]);assert.equal(a.parts.a.index,1);assert.equal(a.parts.a.status,'active');assert.equal(a.status,'active');
+ assert.throws(()=>setBlockCount(a,'b',10));
+});
